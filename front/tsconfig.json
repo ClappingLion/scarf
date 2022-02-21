@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es2020", //붙인 것
+      "dom"
+      // "dom.iterable",
+      // "esnext"
+    ],
+    // "allowJs": true,
+    // "skipLibCheck": true,
+    "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true,
+    "strict": true,
+    // "forceConsistentCasingInFileNames": true,
+    // "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true, //에러 났을 때 위치 알기 쉬움
+    "resolveJsonModule": true,
+    // "isolatedModules": true,
+    // "noEmit": true,
+    //"jsx": "react-jsx",
+    "jsx": "react",
+    // "types": ["node"],
+    "baseUrl": ".", //baseUrl, paths로 절대경로 지정
+    "paths": {
+      "@hooks/*": ["src/hooks/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@utils/*": ["src/utils/*"],
+      "@typings/*": ["src/typings/*"]
+    }
+  }
+  // "include": [ //활성화화면 webpack.config.ts의 path가 에러 아마 src 밖의 node_modules안의 path 타입을 못찾아서 그런듯?
+  //   "src"
+  // ]
+}

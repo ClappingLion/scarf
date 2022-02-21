@@ -1,0 +1,33 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:react-hooks/recommended"],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-undef": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [2, { "args": "none" }],
+        "prettier/prettier": ["error", { "endOfLine": "auto" }] //비주얼 스튜디오 버그수정
+      }
+    }
+  ]
+}
+// {
+//     "extends": ["plugin:prettier/recommended", "react-app"],//프리티어가 추천하는대로 따르겠다
+//     //react-app은 useEffect같은 훅의 deps에 어떤 게 빠졌는지 경고해주는 기증
+//     "rules": {
+//         "prettier/prettier": ["error", { "endOfLine": "auto" }]   //비주얼 스튜디오 버그수정
+//       }
+//   }
